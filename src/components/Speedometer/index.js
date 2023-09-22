@@ -5,6 +5,7 @@ import './index.css'
 
 class Speedometer extends Component {
   state: {count: 0}
+
   Accelerate = () => {
     this.setState(prevState =>
       prevState.count < 200 ? {count: prevState.count + 10} : {count: 200},
@@ -29,11 +30,11 @@ class Speedometer extends Component {
         <p>Speed is {count} mph</p>
         <p>Min Limit is 0mph, Max Limit is 200mph </p>
         <div>
-          <button className="button" onClick={this.Accelerate}>
+          <button type="button" className="button" onClick={this.Accelerate}>
             Accelerate
           </button>
 
-          <button className="button" onClick={this.Brake}>
+          <button type="button" className="button" onClick={this.Brake}>
             Apply Brake
           </button>
         </div>
